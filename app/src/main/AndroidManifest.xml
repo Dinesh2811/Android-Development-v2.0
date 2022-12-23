@@ -38,6 +38,7 @@
         <activity android:name=".kotlin.database.room.MainActivity"/>
         <activity android:name=".java.database.sql.MainActivity"/>
         <activity android:name=".java.app.nav_drawer.NavMain"/>
+        <activity android:name=".java.app.tab_layout.TabLayoutMain"/>
 
     </application>
 
