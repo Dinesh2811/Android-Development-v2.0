@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:id="@+id/topGroup"
+        android:checkableBehavior="all"
+        android:enabled="true">
+        <item
+            android:id="@+id/menuHome"
+            android:title="Home" />
+    </group>
+
+
+    <item
+        android:orderInCategory="2"
+        android:title="Android">
+        <menu>
+            <group
+                android:id="@+id/bottomGroup"
+                android:checkableBehavior="all"
+                android:enabled="true">
+                <item
+                    android:id="@+id/menuJava"
+                    android:orderInCategory="1"
+                    android:title="Java" />
+                <item
+                    android:id="@+id/menuKotlin"
+                    android:orderInCategory="2"
+                    android:title="Kotlin" />
+                <item
+                    android:id="@+id/menuShortcut"
+                    android:orderInCategory="3"
+                    android:title="Shortcut" />
+            </group>
+        </menu>
+    </item>
+
+
+    <group android:orderInCategory="2">
+        <item
+            android:id="@+id/menuLogout"
+            android:title="Logout" />
+    </group>
+
+
+</menu>
