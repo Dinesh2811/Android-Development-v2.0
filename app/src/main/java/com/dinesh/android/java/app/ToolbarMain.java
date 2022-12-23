@@ -1,5 +1,6 @@
 package com.dinesh.android.java.app;
 
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
@@ -28,7 +29,6 @@ public class ToolbarMain extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        toolbar.setCollapseIcon(R.drawable.ic_baseline_arrow_back_24);
         // Enable the back button on the Toolbar
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -40,21 +40,41 @@ public class ToolbarMain extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         tvToolbar = findViewById(R.id.tvToolbar);
 
-        Drawable drawable = menu.findItem(R.id.menuMain).getIcon();
-        drawable = DrawableCompat.wrap(drawable);
-        DrawableCompat.setTint(drawable, ContextCompat.getColor(this,R.color.white));
-        menu.findItem(R.id.menuMain).setIcon(drawable);
+//        toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
+        Drawable navigationIcon = ContextCompat.getDrawable(this, R.drawable.ic_baseline_arrow_back_24);
+        navigationIcon.setTint(Color.WHITE);
+        toolbar.setNavigationIcon(navigationIcon);
+
+//        toolbar.setCollapseIcon(R.drawable.ic_baseline_arrow_back_24);
+        Drawable backCollapseIcon = ContextCompat.getDrawable(this, R.drawable.ic_baseline_arrow_back_24);
+        backCollapseIcon.setTint(Color.WHITE);
+        toolbar.setCollapseIcon(backCollapseIcon);
+
+        Drawable optionDrawableIcon = menu.findItem(R.id.menuMain).getIcon();
+        optionDrawableIcon = DrawableCompat.wrap(optionDrawableIcon);
+        DrawableCompat.setTint(optionDrawableIcon, ContextCompat.getColor(this,R.color.white));
+        menu.findItem(R.id.menuMain).setIcon(optionDrawableIcon);
+
+        Drawable searchDrawableIcon = menu.findItem(R.id.action_search).getIcon();
+        searchDrawableIcon = DrawableCompat.wrap(searchDrawableIcon);
+        DrawableCompat.setTint(searchDrawableIcon, ContextCompat.getColor(this,R.color.white));
+        menu.findItem(R.id.action_search).setIcon(searchDrawableIcon);
 
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
-//        searchView.setBackgroundColor(getResources().getColor(R.color.white));
         searchView.setBackgroundColor(ContextCompat.getColor(this,R.color.white));
         searchView.setQueryHint("Search Here");
         searchView.setMaxWidth(Integer.MAX_VALUE);
         searchView.setIconified(false);
 
         ImageView searchClose = (ImageView) searchView.findViewById(androidx.appcompat.R.id.search_close_btn);
+
+        Drawable collapseIcon = ContextCompat.getDrawable(this, R.drawable.ic_baseline_close_24);
+        collapseIcon.setTint(Color.BLUE);
+        searchClose.setBackground(collapseIcon);
+
         searchClose.setImageResource(R.drawable.ic_baseline_close_24);
+        searchClose.setBackgroundColor(ContextCompat.getColor(this,R.color.teal_200));
 
 //        toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
 //        toolbar.setNavigationOnClickListener(new View.OnClickListener() {

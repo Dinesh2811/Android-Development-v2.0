@@ -27,7 +27,8 @@ class MainActivity : ComponentActivity() {
         }
 
 
-        startActivity(Intent(this, com.dinesh.android.java.database.sql.MainActivity::class.java))
+//        startActivity(Intent(this, com.dinesh.android.java.app.ToolbarMain::class.java))
+        startActivity(Intent(this, com.dinesh.android.java.app.MainActivity::class.java))
         finish()
 
     }

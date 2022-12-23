@@ -24,7 +24,7 @@ public class MainActivity extends ToolbarMain {
         setContentView(R.layout.activity_main);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setCollapseIcon(R.drawable.ic_baseline_arrow_back_24);
+//        toolbar.setCollapseIcon(R.drawable.ic_baseline_arrow_back_24);
 
 //        // Enable the back button on the toolbar
 //        getSupportActionBar().setHomeButtonEnabled(true);
@@ -45,21 +45,21 @@ public class MainActivity extends ToolbarMain {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (pressedTime + 2000 > System.currentTimeMillis()) {
-//                    super.onBackPressed();
-                    finish();
-                    finishAndRemoveTask();
-                    finishAffinity();
-                    System.exit(0);
-                } else {
-                    Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
-                }
-                pressedTime = System.currentTimeMillis();
-            }
-        });
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (pressedTime + 2000 > System.currentTimeMillis()) {
+////                    super.onBackPressed();
+//                    finish();
+//                    finishAndRemoveTask();
+//                    finishAffinity();
+//                    System.exit(0);
+//                } else {
+//                    Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+//                }
+//                pressedTime = System.currentTimeMillis();
+//            }
+//        });
 
         tvToolbar = (TextView) findViewById(R.id.tvToolbar);
         tvToolbar.setOnClickListener(new View.OnClickListener() {
@@ -72,18 +72,49 @@ public class MainActivity extends ToolbarMain {
         return true;
     }
 
-
     @Override
-    public boolean onMenuOpened(int featureId, Menu menu) {
-//        menu.findItem(R.id.menuAdmin).setVisible(false);
-        menu.findItem(R.id.menuAdmin).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                Toast.makeText(MainActivity.this, "Admin Testing", Toast.LENGTH_SHORT).show();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case android.R.id.home:
+                Toast.makeText(this, TAG, Toast.LENGTH_LONG).show();
                 return true;
-            }
-        });
+            case R.id.menuAdmin:
+                Toast.makeText(this, "Admin Testing", Toast.LENGTH_LONG).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
 
-        return true;
+        }
+
     }
+
+//    @Override
+//    public boolean onMenuOpened(int featureId, Menu menu) {
+//
+//        int id = featureId;
+//        switch (id) {
+//            case android.R.id.home:
+//                Toast.makeText(this, "Back Menu", Toast.LENGTH_LONG).show();
+//                return true;
+//            case R.id.menuAdmin:
+//                Toast.makeText(this, "Admin Testing", Toast.LENGTH_LONG).show();
+//                return true;
+//            default:
+//                return super.onMenuOpened(featureId, menu);
+//
+//        }
+//
+//
+//////        menu.findItem(R.id.menuAdmin).setVisible(false);
+////        menu.findItem(R.id.menuAdmin).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+////            @Override
+////            public boolean onMenuItemClick(MenuItem item) {
+////                Toast.makeText(MainActivity.this, "Admin Testing", Toast.LENGTH_SHORT).show();
+////                return true;
+////            }
+////        });
+////
+////        return super.onMenuOpened(featureId, menu);
+//    }
 }
