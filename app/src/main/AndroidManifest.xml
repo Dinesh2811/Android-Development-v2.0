@@ -30,12 +30,14 @@
 
         <activity android:name=".java.fragment.Main"/>
         <activity android:name=".kotlin.fragment.Main"/>
-        <activity android:name=".java.app.MainActivity"/>
-        <activity android:name=".java.app.ToolbarMain"/>
+        <activity android:name=".java.app.toolbar.MainActivity"/>
+        <activity android:name=".java.app.toolbar.ToolbarMain"/>
+        <activity android:name=".java.app.nav_drawer.NavigationDrawer"/>
 
         <activity android:name=".java.database.room.mvvm.MainActivity"/>
         <activity android:name=".kotlin.database.room.MainActivity"/>
         <activity android:name=".java.database.sql.MainActivity"/>
+        <activity android:name=".java.app.nav_drawer.NavMain"/>
 
     </application>
 

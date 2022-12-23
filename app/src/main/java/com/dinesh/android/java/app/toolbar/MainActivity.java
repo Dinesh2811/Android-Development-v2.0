@@ -1,4 +1,4 @@
-package com.dinesh.android.java.app;
+package com.dinesh.android.java.app.toolbar;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -7,8 +7,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.Nullable;
 
 import com.dinesh.android.R;
 
@@ -22,15 +20,7 @@ public class MainActivity extends ToolbarMain {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-//        toolbar.setCollapseIcon(R.drawable.ic_baseline_arrow_back_24);
-
-//        // Enable the back button on the toolbar
-//        getSupportActionBar().setHomeButtonEnabled(true);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
-
+        setToolbar();
 
         textView = findViewById(R.id.ActivityMain_TextView);
         textView.setOnClickListener(new View.OnClickListener() {
@@ -39,8 +29,6 @@ public class MainActivity extends ToolbarMain {
                 Toast.makeText(MainActivity.this, "ActivityMain_TextView", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 
     @Override
@@ -88,33 +76,4 @@ public class MainActivity extends ToolbarMain {
         }
 
     }
-
-//    @Override
-//    public boolean onMenuOpened(int featureId, Menu menu) {
-//
-//        int id = featureId;
-//        switch (id) {
-//            case android.R.id.home:
-//                Toast.makeText(this, "Back Menu", Toast.LENGTH_LONG).show();
-//                return true;
-//            case R.id.menuAdmin:
-//                Toast.makeText(this, "Admin Testing", Toast.LENGTH_LONG).show();
-//                return true;
-//            default:
-//                return super.onMenuOpened(featureId, menu);
-//
-//        }
-//
-//
-//////        menu.findItem(R.id.menuAdmin).setVisible(false);
-////        menu.findItem(R.id.menuAdmin).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-////            @Override
-////            public boolean onMenuItemClick(MenuItem item) {
-////                Toast.makeText(MainActivity.this, "Admin Testing", Toast.LENGTH_SHORT).show();
-////                return true;
-////            }
-////        });
-////
-////        return super.onMenuOpened(featureId, menu);
-//    }
 }

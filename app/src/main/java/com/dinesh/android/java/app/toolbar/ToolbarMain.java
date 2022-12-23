@@ -1,8 +1,9 @@
-package com.dinesh.android.java.app;
+package com.dinesh.android.java.app.toolbar;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,20 +20,41 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import com.dinesh.android.R;
 
 public class ToolbarMain extends AppCompatActivity {
+    private final String TAG = "log_" + ToolbarMain.class.getName().split(ToolbarMain.class.getName().split("\\.")[2] + ".")[1];
     public Toolbar toolbar;
     public TextView tvToolbar;
+    long pressedTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.toolbar_layout);
+        setToolbar();
+
+        toolbar.setNavigationOnClickListener(v -> {
+            if (pressedTime + 2000 > System.currentTimeMillis()) {
+//                    super.onBackPressed();
+                finish();
+                finishAndRemoveTask();
+                finishAffinity();
+                System.exit(0);
+            } else {
+                Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+            }
+            pressedTime = System.currentTimeMillis();
+        });
+
+    }
+
+    public void setToolbar() {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Enable the back button on the Toolbar
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        // Enable the back button on the toolbar
 //        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
+//        getSupportActionBar().setHomeButtonEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
     }
 
     @Override
@@ -76,20 +98,6 @@ public class ToolbarMain extends AppCompatActivity {
         searchClose.setImageResource(R.drawable.ic_baseline_close_24);
         searchClose.setBackgroundColor(ContextCompat.getColor(this,R.color.teal_200));
 
-//        toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(ToolbarMain.this, "This is last activity", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
-        tvToolbar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(ToolbarMain.this, "Hello World", Toast.LENGTH_SHORT).show();
-            }
-        });
         return true;
     }
 
@@ -113,7 +121,6 @@ public class ToolbarMain extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }
 
 /*
