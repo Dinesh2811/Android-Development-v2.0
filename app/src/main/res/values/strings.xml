@@ -2,4 +2,14 @@
     <string name="app_name">Android Development v2.0</string>
     <string name="navigation_drawer_open">navigation_drawer_open</string>
     <string name="navigation_drawer_close">navigation_drawer_close</string>
+
+
+<!--    <string name="styles">-->
+
+<!--        TextView (textView) -> style_TextView,-->
+<!--        EditText (editText) -> style_EditText,-->
+<!--        TextInputEditText (editTextLayout) -> style_TextInputLayout/style_TextInputEditText,-->
+<!--        Button (button) -> style_Button,-->
+
+<!--    </string>-->
 </resources>

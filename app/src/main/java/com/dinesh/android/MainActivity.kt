@@ -11,9 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.dinesh.android.java.app.nav_drawer.NavMain
-import com.dinesh.android.java.app.nav_drawer.NavigationDrawer
-import com.dinesh.android.java.app.tab_layout.TabLayoutMain
+import com.dinesh.android.java.basic.BasicMainActivity
 import com.dinesh.android.ui.theme.AndroidDevelopmentV20Theme
 
 class MainActivity : ComponentActivity() {
@@ -29,7 +27,7 @@ class MainActivity : ComponentActivity() {
         }
 
 
-        startActivity(Intent(this, TabLayoutMain::class.java))
+        startActivity(Intent(this, BasicMainActivity::class.java))
 //        startActivity(Intent(this, NavMain::class.java))
         finish()
 
