@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dinesh.android.java.basic.BasicMainActivity
+import com.dinesh.android.java.dialog.rv.Rv_as_Dialog
 import com.dinesh.android.ui.theme.AndroidDevelopmentV20Theme
 
 class MainActivity : ComponentActivity() {
@@ -27,7 +28,7 @@ class MainActivity : ComponentActivity() {
         }
 
 
-        startActivity(Intent(this, BasicMainActivity::class.java))
+        startActivity(Intent(this, Rv_as_Dialog::class.java))
 //        startActivity(Intent(this, NavMain::class.java))
         finish()
 

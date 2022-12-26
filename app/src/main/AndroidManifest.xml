@@ -56,6 +56,11 @@
         <activity android:name=".java.basic.image_view.test.MainActivity"/>
         <activity android:name=".java.basic.image_view.test.ReadExternalStorage"/>
 
+        <activity android:name=".java.dialog.basic.Main"/>
+        <activity android:name=".java.dialog.rv.Rv_as_Dialog"/>
+        <activity android:name=".java.dialog.rv.recycler_view.basic.RvMain"/>
+        <activity android:name=".java.dialog.rv.recycler_view.basic.NewLayout"/>
+
     </application>
 
 </manifest>
