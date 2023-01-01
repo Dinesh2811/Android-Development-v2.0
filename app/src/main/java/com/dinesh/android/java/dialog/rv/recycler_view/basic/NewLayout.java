@@ -14,7 +14,7 @@ public class NewLayout extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rv_new_layout);
+        setContentView(R.layout.rv1_new_layout);
         textView5 = findViewById(R.id.test_textView5);
         textView6 = findViewById(R.id.test_textView6);
         textView7 = findViewById(R.id.test_textView7);

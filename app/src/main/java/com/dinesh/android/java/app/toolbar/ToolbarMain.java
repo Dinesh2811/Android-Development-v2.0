@@ -89,6 +89,20 @@ public class ToolbarMain extends AppCompatActivity {
         searchView.setMaxWidth(Integer.MAX_VALUE);
         searchView.setIconified(false);
 
+        searchView.setQuery("ghngh",true);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Log.i(TAG, "onQueryTextSubmit: " + query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
         ImageView searchClose = (ImageView) searchView.findViewById(androidx.appcompat.R.id.search_close_btn);
 
         Drawable collapseIcon = ContextCompat.getDrawable(this, R.drawable.ic_baseline_close_24);

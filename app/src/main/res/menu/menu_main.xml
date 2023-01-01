@@ -2,13 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--    name="android:editTextColor">@android:color/white-->
+
+<!--    <item-->
+<!--        android:id="@+id/action_search"-->
+<!--        android:icon="@drawable/ic_baseline_search_24"-->
+<!--        android:title="search"-->
+<!--        app:showAsAction="ifRoom|collapseActionView"-->
+<!--        app:actionViewClass="androidx.appcompat.widget.SearchView" />-->
 
     <item
         android:id="@+id/action_search"
         android:icon="@drawable/ic_baseline_search_24"
         android:title="search"
-        app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="never" />
 
 
     <item

@@ -3,6 +3,7 @@ package com.dinesh.android.java.activity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -14,22 +15,17 @@ import com.dinesh.android.R;
 public class LayoutInflater_Class extends AppCompatActivity {
     private final String TAG = "log_" + getClass().getName().split(getClass().getName().split("\\.")[2] + ".")[1];
 
-    ConstraintLayout parentConstraintLayout;
+    ConstraintLayout parentLayout;
     TextView textView;
+
     TextView textViewChild;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        parentConstraintLayout = findViewById(R.id.constraintLayout);
+        parentLayout = findViewById(R.id.constraintLayout);
         textView = findViewById(R.id.ActivityMain_TextView);
-        View childView = android.view.LayoutInflater.from(getApplicationContext()).inflate(R.layout.progress_bar, parentConstraintLayout, false);
-
-        parentConstraintLayout.addView(childView);
-        textViewChild = childView.findViewById(R.id.textView);
-
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,11 +33,17 @@ public class LayoutInflater_Class extends AppCompatActivity {
             }
         });
 
+
+        View v = LayoutInflater.from(getApplicationContext()).inflate(R.layout.progress_bar, parentLayout, false);
+        parentLayout.addView(v);
+        textViewChild = v.findViewById(R.id.textView);
+
         textViewChild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i(TAG, "onClick: textViewChild");
             }
         });
+
     }
 }

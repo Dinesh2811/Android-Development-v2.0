@@ -60,6 +60,8 @@
         <activity android:name=".java.dialog.rv.Rv_as_Dialog"/>
         <activity android:name=".java.dialog.rv.recycler_view.basic.RvMain"/>
         <activity android:name=".java.dialog.rv.recycler_view.basic.NewLayout"/>
+        <activity android:name=".kotlin.app.ToolbarMain"/>
+        <activity android:name=".kotlin.app.MainActivity"/>
 
     </application>
 

@@ -17,18 +17,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/purple_700"
-            android:elevation="4dp"
+            android:elevation="28dp"
             android:minHeight="?attr/actionBarSize"
             android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:minHeight="?attr/actionBarSize">
+                android:layout_height="?attr/actionBarSize">
 
 
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/tvToolbar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -38,6 +38,67 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Item"
+                    android:minHeight="?attr/actionBarSize"
+                    android:maxHeight="?attr/actionBarSize"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16dp"
+                        android:minHeight="?attr/actionBarSize"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Select Item"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/toolbarSearchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/Widget.AppCompat.SearchView"
+                        android:elevation="64dp"
+                        app:defaultQueryHint="@string/app_name"
+                        app:closeIcon="@drawable/ic_baseline_close_24"
+                        app:iconifiedByDefault="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.SearchView
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    style="@style/Widget.AppCompat.SearchView"
+                    android:elevation="64dp"
+                    app:defaultQueryHint="@string/app_name"
+                    app:closeIcon="@drawable/ic_baseline_close_24"
+                    app:iconifiedByDefault="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

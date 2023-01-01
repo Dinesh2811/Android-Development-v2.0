@@ -36,7 +36,7 @@ public class Rv_as_Dialog extends AppCompatActivity implements RvInterface {
         textView = findViewById(R.id.ActivityMain_TextView);
 
         dialog = new Dialog(Rv_as_Dialog.this);
-        dialog.setContentView(R.layout.rv_main);
+        dialog.setContentView(R.layout.rv1_main);
 //        dialog.setCancelable(false);
 //        dialog.setCanceledOnTouchOutside(false);
 

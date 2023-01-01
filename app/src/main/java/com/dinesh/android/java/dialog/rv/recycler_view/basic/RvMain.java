@@ -24,7 +24,7 @@ public class RvMain extends AppCompatActivity implements RvInterface {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rv_main);
+        setContentView(R.layout.rv1_main);
         recyclerView = findViewById(R.id.test_recyclerView);
 
 //sample Model data
