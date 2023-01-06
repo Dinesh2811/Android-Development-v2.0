@@ -1,4 +1,4 @@
-package com.dinesh.android.java.android_lifecycle.room;//package com.dinesh.sqlite.android_lifecycle.room;
+//package com.dinesh.android.java.android_lifecycle.room;
 //
 //import android.content.Intent;
 //import android.os.Bundle;
@@ -34,6 +34,7 @@ package com.dinesh.android.java.android_lifecycle.room;//package com.dinesh.sqli
 //    protected void onCreate(@Nullable Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_room_main);
+//        Log.e("TAG_", "onCreate: ");
 //        fab = findViewById(R.id.fab);
 //        tvNumber = findViewById(R.id.tvNumber);
 //        //  ViewModel

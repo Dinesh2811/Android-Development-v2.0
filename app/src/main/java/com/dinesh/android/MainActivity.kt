@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dinesh.android.kotlin.app.ToolbarMain
+import com.dinesh.android.root.RvMain
 
 private val TAG = "log_" + MainActivity::class.java.name.split(MainActivity::class.java.name.split(".").toTypedArray()[2] + ".").toTypedArray()[1]
 
@@ -24,7 +25,8 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 
-        startActivity(Intent(this, ToolbarMain::class.java))
+        startActivity(Intent(this, RvMain::class.java))
+//        startActivity(Intent(this, ToolbarMain::class.java))
 //        startActivity(Intent(this, com.dinesh.android.kotlin.app.MainActivity::class.java))
 //        startActivity(Intent(this, NavMain::class.java))
         finish()

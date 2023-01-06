@@ -1,4 +1,4 @@
-package com.dinesh.android.java.android_lifecycle.room;//package com.dinesh.sqlite.android_lifecycle.room;
+//package com.dinesh.android.java.android_lifecycle.room;
 //
 //import android.content.Intent;
 //import android.os.Bundle;
@@ -10,7 +10,8 @@ package com.dinesh.android.java.android_lifecycle.room;//package com.dinesh.sqli
 //import androidx.annotation.Nullable;
 //import androidx.appcompat.app.AppCompatActivity;
 //
-//import com.dinesh.sqlite.R;
+//import com.dinesh.android.R;
+//
 //
 //public class NewNoteActivity extends AppCompatActivity {
 //    private final String TAG = "log_" + getClass().getName().split(getClass().getName().split("\\.")[2] + ".")[1];

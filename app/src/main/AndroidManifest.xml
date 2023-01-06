@@ -43,6 +43,9 @@
         <activity android:name=".java.app.toolbar.MainActivity"/>
         <activity android:name=".java.app.toolbar.ToolbarMain"/>
         <activity android:name=".java.app.nav_drawer.NavigationDrawer"/>
+        <activity android:name=".java.android_lifecycle.a.MainActivity"/>
+        <activity android:name=".java.android_lifecycle.live_data.MainActivity"/>
+        <activity android:name=".java.android_lifecycle.view_model.MainActivity"/>
 
         <activity android:name=".java.database.room.mvvm.MainActivity"/>
         <activity android:name=".kotlin.database.room.MainActivity"/>
@@ -62,6 +65,7 @@
         <activity android:name=".java.dialog.rv.recycler_view.basic.NewLayout"/>
         <activity android:name=".kotlin.app.ToolbarMain"/>
         <activity android:name=".kotlin.app.MainActivity"/>
+        <activity android:name=".root.RvMain"/>
 
     </application>
 

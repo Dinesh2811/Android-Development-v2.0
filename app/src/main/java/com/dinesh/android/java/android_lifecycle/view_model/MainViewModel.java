@@ -1,4 +1,4 @@
-package com.dinesh.android.java.android_lifecycle.View_model;
+package com.dinesh.android.java.android_lifecycle.view_model;
 
 
 import android.util.Log;

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_data);
-//        Log.e(TAG, "onCreate: ");
+        Log.e("TAG_", "onCreate: ");
 
 //        getLifecycle().addObserver(new MainActivityObserver());
 

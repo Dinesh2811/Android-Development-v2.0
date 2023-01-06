@@ -20,6 +20,7 @@ public class GoTo_Class extends NavigationDrawer {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i("TAG_", "onCreate: " );
 
         setNavDrawer();
 
@@ -35,8 +36,6 @@ public class GoTo_Class extends NavigationDrawer {
         }
 
          */
-
-
 
 
         SharedPreferences prefs = getSharedPreferences("X", MODE_PRIVATE);

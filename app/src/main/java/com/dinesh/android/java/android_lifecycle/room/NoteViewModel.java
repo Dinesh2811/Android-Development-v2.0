@@ -1,5 +1,4 @@
-package com.dinesh.android.java.android_lifecycle.room;//package com.dinesh.sqlite.android_lifecycle.room;
-//
+//package com.dinesh.android.java.android_lifecycle.room;
 //
 //import android.app.Application;
 //import android.util.Log;

@@ -24,6 +24,7 @@ public class LayoutInflater_Class extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i("TAG_", "onCreate: " );
         parentLayout = findViewById(R.id.constraintLayout);
         textView = findViewById(R.id.ActivityMain_TextView);
         textView.setOnClickListener(new View.OnClickListener() {

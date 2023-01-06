@@ -1,4 +1,4 @@
-package com.dinesh.android.java.android_lifecycle.View_model;
+package com.dinesh.android.java.android_lifecycle.view_model;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_data);
         TextView mTextView = findViewById(R.id.tvNumber);
+        Log.e("TAG_", "onCreate: ");
 
         //  ViewModel
 //        MainViewModel myData = new MainViewModel();

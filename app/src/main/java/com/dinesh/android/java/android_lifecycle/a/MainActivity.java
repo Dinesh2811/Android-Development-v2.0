@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e(TAG, "onCreate: ");
+        Log.e("TAG_", "onCreate: ");
 
 //        MainActivityObserver mainActivityObserver = new MainActivityObserver();
         getLifecycle().addObserver(new MainActivityObserver());
