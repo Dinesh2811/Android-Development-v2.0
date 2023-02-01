@@ -37,7 +37,6 @@ public class MainActivity extends ToolbarMain {
 //            @Override
 //            public void onClick(View v) {
 //                if (pressedTime + 2000 > System.currentTimeMillis()) {
-////                    super.onBackPressed();
 //                    finish();
 //                    finishAndRemoveTask();
 //                    finishAffinity();
