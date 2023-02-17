@@ -59,7 +59,6 @@
         <item name="maxLines">1</item>
     </style>
 
-
     <style name="style_Button" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -72,7 +71,14 @@
         <item name="strokeColor">@color/purple_500</item>
         <item name="android:clickable">true</item>
         <item name="android:animateOnClick">true</item>
+        <item name="android:enabled">true</item>
+
+        <!--Icon Button-->
+        <!--        <item name="icon">@drawable/ic_baseline_close_24</item>-->
+        <!--        <item name="iconGravity">textEnd</item>-->
+        <!--        <item name="iconSize">16dp</item>-->
     </style>
+
 
     <style name="style_CardView" parent="Widget.MaterialComponents.CardView">
         <item name="android:layout_width">match_parent</item>

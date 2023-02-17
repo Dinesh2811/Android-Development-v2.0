@@ -28,10 +28,6 @@ import com.dinesh.android.root.RvChildModel
 import com.dinesh.android.root.RvMain
 import com.google.android.material.snackbar.Snackbar
 
-//import com.dinesh.android.root.TestRvData.setClassList
-//import com.dinesh.android.root.TestRvData.setRvChildModelList
-//import com.dinesh.android.root.TestRvData.setRvParentModelList
-//import com.dinesh.android.root.TestRvData.setStringList
 
 private val TAG = "log_" + MainActivity::class.java.name.split(MainActivity::class.java.name.split(".").toTypedArray()[2] + ".").toTypedArray()[1]
 
@@ -42,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
 
         startActivity(Intent(this, RvMain::class.java))
+//        startActivity(Intent(this, com.dinesh.android.kotlin.app.user_interface.notification.MainActivity::class.java))
 //        finish()
 
 
